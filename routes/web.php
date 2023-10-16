@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Phone;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/phone-create', function () {
+    $user = User::findOrFail(6)->phones()->create([
+        'phone' => fake()->phoneNumber(),
+    ]);
+});
+
+Route::get('user-phone', function () {
+    $users = User::with('phones')->get();
+    return response()->json($users);
+});
+
+Route::get('phone-user', function () {
+    $phone = Phone::with('user')->get();
+    return response()->json($phone);
 });

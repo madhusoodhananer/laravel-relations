@@ -5,3 +5,126 @@ User::create([
   'password' => Hash::make('123456')
 ]);
 User::first();
+User::create(
+  [
+	"name" => "Subhash",
+	"email" => 's@s.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Ramesh",
+	"email" => 'r@r.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Shalu",
+	"email" => 'k@k.com',
+	"password" => Hash::make("123456")
+  ],
+ 
+);
+User::create(
+  [
+	"name" => "Subhash",
+	"email" => 's@s.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Ramesh",
+	"email" => 'r@r.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Shalu",
+	"email" => 'k@k.com',
+	"password" => Hash::make("123456")
+  ],
+ 
+);
+User::create(
+  [
+	"name" => "Subhash",
+	"email" => 's@s.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Ramesh",
+	"email" => 'r@r.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Shalu",
+	"email" => 'k@k.com',
+	"password" => Hash::make("123456")
+  ],
+ 
+);
+User::create(
+  [
+	"name" => "Subhash",
+	"email" => 's@s.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Ramesh",
+	"email" => 'r@r.com',
+	"password" => Hash::make("123456")
+  ],
+  
+  [
+	"name" => "Shalu",
+	"email" => 'k@k.com',
+	"password" => Hash::make("123456")
+  ],
+ 
+);
+User::create(
+  [
+	"name" => "Ramesh",
+	"email" => 'r@s.com',
+	"password" => Hash::make("123456")
+  ] 
+);
+User::create(
+  [
+	"name" => "Shalu",
+	"email" => 'k@s.com',
+	"password" => Hash::make("123456")
+  ] 
+);
+User::create(
+  [
+	"name" => "Madhusoodhanan",
+	"email" => 'm@s.com',
+	"password" => Hash::make("123456")
+  ] 
+);
+Address::create([
+  "user_id" => 5,
+  "address" => "tpm"
+]);
+Address::create([
+  "user_id" => 5,
+  "address" => "tpm"
+]);
+Address::create([
+  "user_id" => 6,
+  "address" => "kunduthode"
+]);
+Address::create([
+  "user_id" => 7,
+  "address" => "Kozhikode"
+]);
+Phone::create(
+  [
+	'user_id' => 1,
+	'phone' => '1234567890'
+  ]
+);

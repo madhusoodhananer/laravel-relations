@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('post_id')->unsigned();
             $table->bigInteger('tag_id')->unsigned();
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

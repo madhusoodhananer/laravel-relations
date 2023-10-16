@@ -43,7 +43,12 @@ Route::get('create-post-tag',function(){
     $post = Post::findOrFail(fake()->randomElement([1,2,3,4]));
     // this will attach the tag to the post
     // the random element is used to pick a random tag
-    $post->tags()->attach(fake()->randomElement([1,2,3,4,5,6,7,8,9,10]));
+    $post->tags()->attach([
+        1 =>[ 
+            'tag_id' => fake()->randomElement([1,2,3,4,5,6,7,8,9,10]),
+            'status' => fake()->randomElement(['pending','published','approved'])
+        ]
+    ]);
 });
 
 Route::get('delete-post-tag',function(){
@@ -82,6 +87,8 @@ Route::get('tag-post',function(){
      * This is actually a fetches all the tags with posts
      * Here i combined the posts user relation with the tags
      */
+    // $post = Post::first();
+    // dd($post->tags->first());
     $tag = Tag::with(['posts','posts.user'])->get();
     return response()->json($tag);
 });

@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Mechanic;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
-
+use Faker\Factory as FakerFactory;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/create-user', function () {
+    for($i = 0; $i < 10; $i++) {
+        User::factory()->create();
+    }
 });
+
